@@ -1,0 +1,19 @@
+
+<h1>Edit Restaurant!</h1>
+
+<form [formGroup]="editResto" (ngSubmit)="collection()">
+    <div class="mb-3 mx-2 ">
+        <label for="exampleInputEmail1" class="form-label"> Name </label>
+        <input type="email" class="form-control" placeholder="Enter Name" formControlName="name">
+    </div>
+    <div class="mb-3 mx-2 ">
+        <label for="exampleInputEmail1" class="form-label"> Address </label>
+        <input type="email" class="form-control" placeholder="Enter Address" formControlName="address">
+    </div>
+    <div class="mb-3 mx-2 ">
+        <label for="exampleInputEmail1" class="form-label"> Email </label>
+        <input type="email" class="form-control" placeholder="Enter Email" formControlName="email">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>

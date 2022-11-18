@@ -1,0 +1,22 @@
+<h1>Add Your Restaurant!</h1>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success !</strong> Your has been registered successfully.
+    <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<form [formGroup]="register" (ngSubmit)="collection()">
+    <div class="mb-3 mx-2 ">
+        <label for="exampleInputEmail1" class="form-label"> Name </label>
+        <input type="email" class="form-control" placeholder="Enter Name" formControlName="name">
+    </div>
+    <div class="mb-3 mx-2 ">
+        <label for="exampleInputEmail1" class="form-label"> Password </label>
+        <input type="password" class="form-control" placeholder="Enter Password" formControlName="password">
+    </div>
+    <div class="mb-3 mx-2 ">
+        <label for="exampleInputEmail1" class="form-label"> Email </label>
+        <input type="email" class="form-control" placeholder="Enter Email" formControlName="email">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
